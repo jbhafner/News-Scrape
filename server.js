@@ -28,19 +28,19 @@ app.use(express.static("public"));
 
 // ===== HEROKU / MLAB CONNECTION INFO ===== //
 // ===== HEROKU CONNECTION ===== //
-// var mongod_uri = "mongodb://heroku_d86rjg3f:tmhg436t51u8vc3fid68v7p7da@ds129776.mlab.com:29776/heroku_d86rjg3f";
-// mongoose.Promise = Promise;
-// mongoose.connect(mongod_uri, {
-//   useMongoClient: true
-// });
+var mongod_uri = "mongodb://heroku_d86rjg3f:tmhg436t51u8vc3fid68v7p7da@ds129776.mlab.com:29776/heroku_d86rjg3f";
+mongoose.Promise = Promise;
+mongoose.connect(mongod_uri, {
+  useMongoClient: true
+});
 
 // ===== LOCAL CONNECTION ===== //
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
-mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/week18Populater", {
-  useMongoClient: true
-});
+// mongoose.Promise = Promise;
+// mongoose.connect("mongodb://localhost/week18Populater", {
+//   useMongoClient: true
+// });
 
 //===== ROUTES ===== //
 
