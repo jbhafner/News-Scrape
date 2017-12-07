@@ -12,7 +12,7 @@ var cheerio = require("cheerio");
 // Require all models
 var db = require("./models");
 
-var PORT = 3002;
+var port = process.env.PORT || 3002;
 
 // Initialize Express
 var app = express();
@@ -164,6 +164,6 @@ app.get("/count", function(req, res) {
 
 
 // ===== START SERVER ===== //
-app.listen(PORT, function() {
-  console.log("App running on port " + PORT + "!");
+app.listen(port, function() {
+  console.log("App running on port " + port + "!");
 });
